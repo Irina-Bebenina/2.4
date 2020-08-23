@@ -8,7 +8,7 @@ class StatsServiceTest {
 
 
     @Test
-    void calculateSum() {
+    void shouldCalculateSum() {
 
         StatsService service = new StatsService();
 
@@ -38,7 +38,7 @@ class StatsServiceTest {
 
 
     @Test
-    void shouldCalculateFindMax() {
+    void shouldMaxSales() {
 
         StatsService service = new StatsService();
 
@@ -46,7 +46,7 @@ class StatsServiceTest {
 
         int expected = 8;
 
-        int actual = service.findMax(salesAmount);
+        int actual = service.maxSales(salesAmount);
 
         assertEquals(expected, actual);
     }
@@ -67,7 +67,7 @@ class StatsServiceTest {
 
 
     @Test
-    void shouldCalculateBelowAverageSales() {
+    void shouldBelowAverageSales() {
 
         StatsService service = new StatsService();
 
@@ -75,13 +75,13 @@ class StatsServiceTest {
 
         int expected = 5;
 
-        int actual = service.AverageSales(salesAmount);
+        int actual = service.belowAverageSales(salesAmount);
 
         assertEquals(expected, actual);
     }
 
     @Test
-    void shouldCalculateAboveAverageSales() {
+    void shouldCalcAboveAverageSales() {
 
         StatsService service = new StatsService();
 
@@ -89,7 +89,7 @@ class StatsServiceTest {
 
         int expected = 5;
 
-        int actual = service.AboveAverageSales(salesAmount);
+        int actual = service.aboveAverageSales(salesAmount);
 
         assertEquals(expected, actual);
     }
